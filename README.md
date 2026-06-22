@@ -398,6 +398,19 @@ All endpoints are prefixed with `/MusicApp/`.
 
 MusicApp uses **DRF Token Authentication**.
 
+### 🧪 Test Accounts
+
+The seeded database ships with the following accounts ready to use:
+
+| Role | Username | Password |
+|---|---|---|
+| 🛠️ **Staff** | `test` | `test12345` |
+| 👤 User | `bob`  | `123` |
+| 👤 User | `rui`  | `123` |
+| 👤 User | `Ana`  | `123` |
+
+> 💡 Log in with **`test` / `test12345`** to access the **Staff Dashboard** (Deezer import, articles, concerts, moderation). The other accounts are regular users for testing the social features (favourites, comments, ratings, likes).
+
 ### Login flow
 
 1. User submits credentials to `POST /api/auth/login/`.
@@ -439,7 +452,7 @@ Sub-sections (all under `/staff-dashboard/...`):
 | `/staff-dashboard/comments` | `AnalyzeComments` | Moderate user comments |
 | `/staff-dashboard/ratings` | `ManageRatings` | Moderate user ratings |
 
-> 💡 You can create a staff user with `python manage.py createsuperuser`, or by toggling `is_staff` in `/admin/` for any existing user.
+> 💡 You can create a staff user with `python manage.py createsuperuser`, or by toggling `is_staff` in `/admin/` for any existing user. The included **`test` / `test12345`** account already has staff privileges.
 
 ---
 
